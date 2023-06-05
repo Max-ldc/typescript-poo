@@ -1,0 +1,1 @@
+In my TypeScript discovery (before I start to learn Angular) I made some exercises for use POO with TypeScript.

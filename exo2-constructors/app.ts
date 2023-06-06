@@ -27,7 +27,8 @@ class Person {
             this.firstName = userOrFirstName.firstName;
             this.lastName = userOrFirstName.lastName;
         }
-        (!age) ? this.age = 25 : this.age = age;
+        // this.age = (!age) ? 25 : age;
+        this.age = age ?? 25;
     }
 
     display(): void {

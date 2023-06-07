@@ -49,11 +49,11 @@ class Employee extends Person implements Salaried {
     static counter: number;
 
     static {
-        this.counter = 0;
+        Employee.counter = 0;
     }
 
     static getCounter(): number {
-        return this.counter;
+        return Employee.counter;
     }
 
     // o Dans le constructeur de la classe Employee, faites en sorte qu’à chaque nouvelle création d’objet (donc de passage par le constructeur) le champ counter soit incrémenté
@@ -62,8 +62,7 @@ class Employee extends Person implements Salaried {
     constructor(firstName: string, lastName: string, salary: number, age?: number, gender?: string) {
         super(firstName, lastName, age, gender);
         this.salary = salary;
-        Employee.counter++;
-        this.employeeId = Employee.counter;
+        this.employeeId = ++Employee.counter;
     }
 
     giveSalary(): number {

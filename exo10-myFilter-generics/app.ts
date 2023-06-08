@@ -22,7 +22,6 @@ function evenRule(value: number): boolean {
     return (value % 2 === 0);
 }
 
-
 function isBeginningByAToM(str: string): boolean {
     // avec test des codes UTF-6 (s'ils sont entre les codes de "A" et de "M", ou entre ceux de "a" et "m") :
     // return ((str.charCodeAt(0) > 64 && str.charCodeAt(0) < 78) || (str.charCodeAt(0) > 96 && str.charCodeAt(0) < 110));

@@ -13,7 +13,7 @@ interface User {
 // · Sera abstraite
 
 abstract class Person {
-    public firstName: string;
+    firstName: string;
     protected lastName: string;
     protected age: number;
     readonly #gender: string;
@@ -150,4 +150,3 @@ let boss = new Manager("F1", [toto, moi], "Big", "Boss", 1000000, 73);
 
 boss.display();
 boss.doWork();
-

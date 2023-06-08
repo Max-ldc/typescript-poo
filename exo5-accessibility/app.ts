@@ -10,7 +10,7 @@ interface User {
 // § gender sera toujours privé après compilation en JavaScript
 
 class Person {
-    public firstName: string;
+    firstName: string;
     protected lastName: string;
     private age: number;
     readonly #gender: string;

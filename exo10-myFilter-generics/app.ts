@@ -5,7 +5,7 @@ function myFilter<T>(
     array: Array<T>,
     filterRule : (x: T) => boolean
     ): Array<T> {
-    let newTable = [];
+    let newTable: Array<T> = [];
     for (let element of array) {
         if (filterRule(element)) {
             newTable.push(element);
@@ -23,12 +23,11 @@ function evenRule(value: number): boolean {
 }
 
 function isBeginningByAToM(str: string): boolean {
-    // avec test des codes UTF-6 (s'ils sont entre les codes de "A" et de "M", ou entre ceux de "a" et "m") :
-    // return ((str.charCodeAt(0) > 64 && str.charCodeAt(0) < 78) || (str.charCodeAt(0) > 96 && str.charCodeAt(0) < 110));
     return (/^[A-Ma-m]$/).test(str[0]);
+    // return str[0] <= 'm';
 }
 
-// console.log(myFilter(numberTable, oddRule));
-// console.log(myFilter(numberTable, evenRule));
+console.log(myFilter<number>(numberTable, oddRule));
+console.log(myFilter<number>(numberTable, evenRule));
 
-console.log(myFilter(stringTable, isBeginningByAToM));
+console.log(myFilter<string>(stringTable, isBeginningByAToM));
